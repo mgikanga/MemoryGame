@@ -6,4 +6,5 @@ const Navbar = () =>(
   <h1>Clicky Game, A Fun Way To Jog Your Memory</h1>
 </nav>
 );
+
 export default Navbar;
