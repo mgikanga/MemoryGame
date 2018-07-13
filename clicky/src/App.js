@@ -11,7 +11,8 @@ class App extends React.Component {
         // hasBeenClicked: false,
         photos: options,
         clicked:[],
-        score: 0
+        score: 0,
+        points:0,
     };
     // shuffle the images
 
@@ -40,29 +41,7 @@ class App extends React.Component {
         }
         return arra1;
     }
-    // handleIncrement increases this.state.count by 1
-    // handleIncrement = () => {
-    //     // We always use the setState method to update a component's state
-    //     if (this.state.count <= 2) {
-    //         this.setState({ count: this.state.count + 1 });
-    //         console.log("score", this.state.count)
-    //     }
-    //     else if (this.state.count > 2)
-    //         console.log("you should end the game")
-    // };
-
-// handleIncrement = () => {
-//    let shuffled =  this.shuffle(this.state.options)
-//     if(this.state.hasBeenClicked===false){
-//     this.setState({
-//       hasBeenClicked: true
-      
-//     }, () => console.log(this.state.hasBeenClicked)) // prints true
-// }
-// else {
-//     console.log("already clicked")
-// }
-//   }
+    
 
 handleIncrement(id) {
     console.log(id)
@@ -84,7 +63,8 @@ handleIncrement(id) {
       this.setState({
         photos: shuffled,
         clicked: [],
-        score: 0
+        score: 0,
+        points: this.state.score
       })
     }
     console.log("Clicked");
@@ -98,7 +78,8 @@ handleIncrement(id) {
         console.log(this.props)
         return (
             <Wrapper>
-                 <h1> score: {this.state.score}</h1>
+                 <h1>Your tokens: {this.state.score} <br/> Top tokens:{this.state.points}</h1>
+
                 <Navbar 
    
                 />
