@@ -5,7 +5,7 @@ import "./Counter.js";
 const ImageCard = (props) => (
   <div className="card">
     <div className="img-container">
-      <img onClick={props.onClick}
+      <img onClick={() => props.onClick(props.id)}
         alt="take a guess"
         src={props.image}
         id = {props.id}
